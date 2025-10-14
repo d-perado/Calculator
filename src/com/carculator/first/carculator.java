@@ -8,19 +8,19 @@ public class carculator {
 
         Scanner sc = new Scanner(System.in);
         while (true) {
-            System.out.println(":::정수입력 하세요.:::");
+            System.out.println(":::정수입력 하세요. 종료: exit :::");
             String input1 = sc.nextLine();
             if (input1.contains("exit")) {
                 System.out.println(":::계산기를 종료합니다.:::");
                 break;
             }
-            System.out.println(":::정수입력 하세요.:::");
+            System.out.println(":::정수입력 하세요. 종료: exit :::");
             String input2 = sc.nextLine();
             if (input2.contains("exit")) {
                 System.out.println(":::계산기를 종료합니다.:::");
                 break;
             }
-            System.out.println(":::사칙연산기호를 입력하세요.(+,-,/,*):::");
+            System.out.println(":::사칙연산기호를 입력하세요.(+,-,/,*) 종료: exit :::");
             String input3 = sc.nextLine();
             if (input3.contains("exit")) {
                 System.out.println(":::계산기를 종료합니다.:::");
