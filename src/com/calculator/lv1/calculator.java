@@ -1,8 +1,8 @@
-package com.carculator.lv1;
+package com.calculator.lv1;
 
 import java.util.Scanner;
 
-public class carculator {
+public class calculator {
 
     public static void main(String[] args) {
 
