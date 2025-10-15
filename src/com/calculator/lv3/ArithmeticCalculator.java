@@ -2,13 +2,13 @@ package com.calculator.lv3;
 
 import java.util.ArrayList;
 
-public class Calculator<T extends Number> {
+public class ArithmeticCalculator<T extends Number> {
     //속성
     private ArrayList<Double> results; //계산된 결과값들
     private boolean calculatorOnOFF;
 
     //생성자
-    Calculator() {
+    ArithmeticCalculator() {
         this.calculatorOnOFF = true;
         results = new ArrayList<>();
     }

@@ -6,14 +6,15 @@ public class App {
 
     public static void main(String[] args) {
 
-        Calculator calculator = new Calculator();
+        ArithmeticCalculator arithmeticCalculator = new ArithmeticCalculator();
 
 
         Scanner sc = new Scanner(System.in);
 
 
 
-        while (calculator.isCalculatorOnOFF()) {
+        while (arithmeticCalculator.isCalculatorOnOFF()) {
+            Operation operation = null;
             System.out.println("원하는 기능을 선택하세요.");
             System.out.println("1. 연산 2. 연산기록 보기 3. 연산기록 제거 4.입력값 보다 큰 수 exit. 종료");
             String input = sc.nextLine();
@@ -31,23 +32,24 @@ public class App {
                     try {
                         num1 = Double.parseDouble(input1);
                         num2 = Double.parseDouble(input2);
-                        switch (input3) {
-                            case "+": {
-                                System.out.println(calculator.plus(num1,num2));
-                                calculator.addResult(calculator.plus(num1,num2));
+                        operation = Operation.checkOper(input3);
+                        switch (operation) {
+                            case PLUS: {
+                                System.out.println(arithmeticCalculator.plus(num1,num2));
+                                arithmeticCalculator.addResult(arithmeticCalculator.plus(num1,num2));
                                 break;
                             }
-                            case "*":
-                                System.out.println(calculator.mul(num1,num2));
-                                calculator.addResult(calculator.mul(num1,num2));
+                            case MUL:
+                                System.out.println(arithmeticCalculator.mul(num1,num2));
+                                arithmeticCalculator.addResult(arithmeticCalculator.mul(num1,num2));
                                 break;
-                            case "-":
-                                System.out.println(calculator.minus(num1,num2));
-                                calculator.addResult(calculator.minus(num1,num2));
+                            case MINUS:
+                                System.out.println(arithmeticCalculator.minus(num1,num2));
+                                arithmeticCalculator.addResult(arithmeticCalculator.minus(num1,num2));
                                 break;
-                            case "/":
-                                System.out.println(calculator.divid(num1,num2));
-                                calculator.addResult(calculator.divid(num1,num2));
+                            case DIVIDE:
+                                System.out.println(arithmeticCalculator.divid(num1,num2));
+                                arithmeticCalculator.addResult(arithmeticCalculator.divid(num1,num2));
                                 break;
                             default:
                                 System.out.println(":::올바른 사칙연산기호를 입력해주세요.:::");
@@ -58,22 +60,22 @@ public class App {
                     break;
                 }
                 case "2": {
-                    if (calculator.getResults() == null) {
+                    if (arithmeticCalculator.getResults() == null) {
                         System.out.println("연산기록이 없습니다.");
                         break;
                     }
-                    System.out.println(calculator.getResults());
+                    System.out.println(arithmeticCalculator.getResults());
                     break;
                 }
                 case "3": {
-                    calculator.removeFirstData();
+                    arithmeticCalculator.removeFirstData();
                     break;
                 }
                 case "4":{
                     System.out.println("비교하고 싶은 수를 입력하세요.");
                     try{
-                    Double input4=sc.nextDouble();
-                    calculator.choiceBiggerNumber(input4);
+                        Double input4=sc.nextDouble();
+                        arithmeticCalculator.choiceBiggerNumber(input4);
                     } catch (Exception e){
                         System.out.println("올바른 수를 입력하세요.");
                     }
@@ -82,7 +84,7 @@ public class App {
                 case "exit": {
                     System.out.println("Test");
                     System.out.println("계산기가 종료됩니다.");
-                    calculator.setCalculatorOnOFF();
+                    arithmeticCalculator.setCalculatorOnOFF();
                 }
             }
         }
