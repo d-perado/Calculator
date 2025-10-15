@@ -33,7 +33,7 @@ public class Calculator {
             try {
                 num1 = Integer.parseInt(input1);
                 num2 = Integer.parseInt(input2);
-                if(num1*num2<0){
+                if(num1*num2<=0){
                     System.out.println("양수만 입력 가능합니다.");
                     break;
                 }
