@@ -15,10 +15,12 @@ public class App {
 
         while (arithmeticCalculator.isCalculatorOnOFF()) {
             Operation operation = null;
+
             System.out.println("원하는 기능을 선택하세요.");
             System.out.println("1. 연산 2. 연산기록 보기 3. 연산기록 제거 4.입력값 보다 큰 수 exit. 종료");
             String input = sc.nextLine();
             switch (input) {
+
                 case "1": {
                     System.out.println("정수를 입력하세요.");
                     String input1=sc.nextLine();
@@ -74,15 +76,14 @@ public class App {
                 case "4":{
                     System.out.println("비교하고 싶은 수를 입력하세요.");
                     try{
-                        Double input4=sc.nextDouble();
-                        arithmeticCalculator.choiceBiggerNumber(input4);
+                        Double input4=Double.parseDouble(sc.nextLine());
+                        arithmeticCalculator.printBiggerNumber(input4);
                     } catch (Exception e){
                         System.out.println("올바른 수를 입력하세요.");
                     }
                     break;
                 }
                 case "exit": {
-                    System.out.println("Test");
                     System.out.println("계산기가 종료됩니다.");
                     arithmeticCalculator.setCalculatorOnOFF();
                 }

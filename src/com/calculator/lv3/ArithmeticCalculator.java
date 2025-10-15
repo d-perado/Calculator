@@ -1,6 +1,7 @@
 package com.calculator.lv3;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class ArithmeticCalculator<T extends Number> {
     //속성
@@ -72,15 +73,10 @@ public class ArithmeticCalculator<T extends Number> {
     }
 
     //입력 받은 수보다 큰 수만 출력하기
-    public void choiceBiggerNumber(T num) {
+    public void printBiggerNumber(T num) {
         if(this.results==null)return;
-        ArrayList<Double> biggerNumbs = new ArrayList<>();
-        this.results.forEach((result)->{
-                if (result > num.doubleValue()) {
-                    biggerNumbs.add(result);
-                    System.out.println(biggerNumbs);
-                }
+        System.out.println(this.results.stream()
+                .filter((value)->(value>num.doubleValue()))
+                .collect(Collectors.toList()));}
 
-    });
-}
 }
