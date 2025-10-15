@@ -4,21 +4,23 @@ import java.util.ArrayList;
 
 public class Calculator {
     //속성
-    private ArrayList<Double> results; //계산된 결과값들
+    private ArrayList<String> results; //계산된 결과값들
+    private boolean calculatorOnOFF;
 
     //생성자
     Calculator(){
-
+        this.calculatorOnOFF=true;
+        results=new ArrayList<>();
     }
 
     //기능
     //덧셈
-    public int plus(Integer a, Integer b) {
+    public Integer plus(Integer a, Integer b) {
         return a+b;
     }
 
     //뺄셈
-    public int minus(Integer a, Integer b){
+    public Integer minus(Integer a, Integer b){
         return a-b;
     }
 
@@ -38,15 +40,31 @@ public class Calculator {
     }
 
     //getters
+    //계산기 전원
 
-    public ArrayList<Double> getResults() {
+    public boolean isCalculatorOnOFF() {
+        return calculatorOnOFF;
+    }
+
+    //연산기록 조회
+    public ArrayList<String> getResults() {
         return results;
     }
 
-
     //setters
-    public void setResults(ArrayList<Double> results) {
+    //계산기 전원 on/off
+    public void setCalculatorOnOFF() {
+        this.calculatorOnOFF = !calculatorOnOFF;
+    }
+
+    //연산기록변경
+    public void setResults(ArrayList<String> results) {
         this.results = results;
+    }
+
+    //연산기록 추가
+    public void addResult(String result){
+        this.results.add(result);
     }
 
     //가장 먼저 저장된 데이터 제거
