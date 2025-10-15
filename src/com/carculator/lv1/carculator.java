@@ -1,4 +1,4 @@
-package com.carculator.first;
+package com.carculator.lv1;
 
 import java.util.Scanner;
 
