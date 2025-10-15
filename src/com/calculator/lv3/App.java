@@ -5,14 +5,17 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
+
         Calculator calculator = new Calculator();
 
 
         Scanner sc = new Scanner(System.in);
 
+
+
         while (calculator.isCalculatorOnOFF()) {
             System.out.println("원하는 기능을 선택하세요.");
-            System.out.println("1. 연산 2. 연산기록 보기 3. 연산기록 제거 exit. 종료");
+            System.out.println("1. 연산 2. 연산기록 보기 3. 연산기록 제거 4.입력값 보다 큰 수 exit. 종료");
             String input = sc.nextLine();
             switch (input) {
                 case "1": {
@@ -31,20 +34,20 @@ public class App {
                         switch (input3) {
                             case "+": {
                                 System.out.println(calculator.plus(num1,num2));
-                                calculator.addResult(calculator.plus(num1,num2).toString());
+                                calculator.addResult(calculator.plus(num1,num2));
                                 break;
                             }
                             case "*":
                                 System.out.println(calculator.mul(num1,num2));
-                                calculator.addResult(calculator.mul(num1,num2).toString());
+                                calculator.addResult(calculator.mul(num1,num2));
                                 break;
                             case "-":
                                 System.out.println(calculator.minus(num1,num2));
-                                calculator.addResult(calculator.minus(num1,num2).toString());
+                                calculator.addResult(calculator.minus(num1,num2));
                                 break;
                             case "/":
                                 System.out.println(calculator.divid(num1,num2));
-                                calculator.addResult(calculator.divid(num1,num2).toString());
+                                calculator.addResult(calculator.divid(num1,num2));
                                 break;
                             default:
                                 System.out.println(":::올바른 사칙연산기호를 입력해주세요.:::");
@@ -66,7 +69,18 @@ public class App {
                     calculator.removeFirstData();
                     break;
                 }
+                case "4":{
+                    System.out.println("비교하고 싶은 수를 입력하세요.");
+                    try{
+                    Double input4=sc.nextDouble();
+                    calculator.choiceBiggerNumber(input4);
+                    } catch (Exception e){
+                        System.out.println("올바른 수를 입력하세요.");
+                    }
+                    break;
+                }
                 case "exit": {
+                    System.out.println("Test");
                     System.out.println("계산기가 종료됩니다.");
                     calculator.setCalculatorOnOFF();
                 }
