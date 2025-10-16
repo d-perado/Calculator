@@ -16,13 +16,13 @@ public class ArithmeticCalculator<T extends Number> {
 
     //기능
     //덧셈
-    Calculatior<T> plus = (T a, T b) -> a.doubleValue() +  b.doubleValue();
+    Calculator<T> plus = (T a, T b) -> a.doubleValue() +  b.doubleValue();
 
     //뺄셈
-    Calculatior<T> minus = (T a, T b) -> a.doubleValue() +  b.doubleValue();
+    Calculator<T> minus = (T a, T b) -> a.doubleValue() +  b.doubleValue();
 
     //나눗셈
-    Calculatior<T> divid = (T a, T b) -> {
+    Calculator<T> divid = (T a, T b) -> {
         if(b.equals(0)){
             return Double.POSITIVE_INFINITY;
         } else {
@@ -31,7 +31,7 @@ public class ArithmeticCalculator<T extends Number> {
     };
 
     //곱셈
-    Calculatior<T> mul = (T a,T b) -> a.doubleValue() +  b.doubleValue();
+    Calculator<T> mul = (T a,T b) -> a.doubleValue() +  b.doubleValue();
 
     //getters
     //계산기 전원
