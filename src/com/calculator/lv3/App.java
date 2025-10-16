@@ -37,21 +37,21 @@ public class App {
                         operation = Operation.checkOper(input3);
                         switch (operation) {
                             case PLUS: {
-                                System.out.println(arithmeticCalculator.plus(num1,num2));
-                                arithmeticCalculator.addResult(arithmeticCalculator.plus(num1,num2));
+                                System.out.println(arithmeticCalculator.plus.compute(num1,num2));
+                                arithmeticCalculator.addResult(arithmeticCalculator.plus.compute(num1,num2));
                                 break;
                             }
                             case MUL:
-                                System.out.println(arithmeticCalculator.mul(num1,num2));
-                                arithmeticCalculator.addResult(arithmeticCalculator.mul(num1,num2));
+                                System.out.println(arithmeticCalculator.mul.compute(num1,num2));
+                                arithmeticCalculator.addResult(arithmeticCalculator.mul.compute(num1,num2));
                                 break;
                             case MINUS:
-                                System.out.println(arithmeticCalculator.minus(num1,num2));
-                                arithmeticCalculator.addResult(arithmeticCalculator.minus(num1,num2));
+                                System.out.println(arithmeticCalculator.minus.compute(num1,num2));
+                                arithmeticCalculator.addResult(arithmeticCalculator.minus.compute(num1,num2));
                                 break;
                             case DIVIDE:
-                                System.out.println(arithmeticCalculator.divid(num1,num2));
-                                arithmeticCalculator.addResult(arithmeticCalculator.divid(num1,num2));
+                                System.out.println(arithmeticCalculator.divid.compute(num1,num2));
+                                arithmeticCalculator.addResult(arithmeticCalculator.divid.compute(num1,num2));
                                 break;
                             default:
                                 System.out.println(":::올바른 사칙연산기호를 입력해주세요.:::");

@@ -16,28 +16,22 @@ public class ArithmeticCalculator<T extends Number> {
 
     //기능
     //덧셈
-    public Double plus(T a, T b) {
-        return (Double) a + (Double) b;
-    }
+    Calculatior<T> plus = (T a, T b) -> a.doubleValue() +  b.doubleValue();
 
     //뺄셈
-    public Double minus(T a, T b) {
-        return (Double) a - (Double) b;
-    }
+    Calculatior<T> minus = (T a, T b) -> a.doubleValue() +  b.doubleValue();
 
     //나눗셈
-    public Double divid(T a, T b) {
-        if (b.equals(0)) {
+    Calculatior<T> divid = (T a, T b) -> {
+        if(b.equals(0)){
             return Double.POSITIVE_INFINITY;
         } else {
-            return (Double) a / (Double) b;
+            return a.doubleValue() / b.doubleValue();
         }
-    }
+    };
 
     //곱셈
-    public Double mul(T a, T b) {
-        return (Double) a * (Double) b;
-    }
+    Calculatior<T> mul = (T a,T b) -> a.doubleValue() +  b.doubleValue();
 
     //getters
     //계산기 전원
