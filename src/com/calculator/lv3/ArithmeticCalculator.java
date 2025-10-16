@@ -35,7 +35,6 @@ public class ArithmeticCalculator<T extends Number> {
 
     //getters
     //계산기 전원
-
     public boolean isCalculatorOnOFF() {
         return calculatorOnOFF;
     }
