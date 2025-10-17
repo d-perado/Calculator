@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.function.BiFunction;
 
 public enum Operation {
-    PLUS("+" ),
+    PLUS("+"),
     MINUS("-"),
     MUL("*"),
     DIVIDE("/");
@@ -19,6 +19,8 @@ public enum Operation {
     public String getUserInput() {
         return userInput;
     }
+
+
 
     public static Operation checkOper(String input){
         return Arrays.stream(Operation.values())
