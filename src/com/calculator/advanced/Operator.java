@@ -1,9 +1,8 @@
-package com.calculator.lv3;
+package com.calculator.advanced;
 
 import java.util.Arrays;
-import java.util.function.BiFunction;
 
-public enum Operation {
+public enum Operator {
     PLUS("+"),
     MINUS("-"),
     MUL("*"),
@@ -12,7 +11,7 @@ public enum Operation {
 
     private final String userInput;
 
-    Operation(String userInput){
+    Operator(String userInput){
         this.userInput=userInput;
     }
 
@@ -22,8 +21,8 @@ public enum Operation {
 
 
 
-    public static Operation checkOper(String input){
-        return Arrays.stream(Operation.values())
+    public static Operator getOperatorFromUser(String input){
+        return Arrays.stream(Operator.values())
                 .filter(operation -> operation.userInput.equals(input))
                 .findAny()
                 .orElseThrow(()->new IllegalArgumentException("연산자를 입력하세요"));
