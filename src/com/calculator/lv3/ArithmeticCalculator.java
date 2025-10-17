@@ -16,14 +16,14 @@ public class ArithmeticCalculator<T extends Number> {
 
     //기능
     //덧셈
-    Calculator<T> plus = (T a, T b) -> a.doubleValue() +  b.doubleValue();
+    Calculator<T> plus = (T a, T b) -> a.doubleValue() + b.doubleValue();
 
     //뺄셈
-    Calculator<T> minus = (T a, T b) -> a.doubleValue() +  b.doubleValue();
+    Calculator<T> minus = (T a, T b) -> a.doubleValue() + b.doubleValue();
 
     //나눗셈
     Calculator<T> divid = (T a, T b) -> {
-        if(b.equals(0)){
+        if (b.equals(0)) {
             return Double.POSITIVE_INFINITY;
         } else {
             return a.doubleValue() / b.doubleValue();
@@ -31,7 +31,7 @@ public class ArithmeticCalculator<T extends Number> {
     };
 
     //곱셈
-    Calculator<T> mul = (T a,T b) -> a.doubleValue() +  b.doubleValue();
+    Calculator<T> mul = (T a, T b) -> a.doubleValue() + b.doubleValue();
 
     //getters
     //계산기 전원
@@ -62,14 +62,20 @@ public class ArithmeticCalculator<T extends Number> {
 
     //가장 먼저 저장된 데이터 제거
     public void removeFirstData() {
+        if (this.results.isEmpty()) {
+            System.out.println("제거할 데이터가 없습니다.");
+            return;
+        }
+        ;
         this.results.remove(0);
     }
 
     //입력 받은 수보다 큰 수만 출력하기
     public void printBiggerNumber(T num) {
-        if(this.results==null)return;
+        if (this.results == null) return;
         System.out.println(this.results.stream()
-                .filter((value)->(value>num.doubleValue()))
-                .collect(Collectors.toList()));}
+                .filter((value) -> (value > num.doubleValue()))
+                .collect(Collectors.toList()));
+    }
 
 }
