@@ -22,7 +22,7 @@ public enum Operation {
 
 
 
-    public static Operation checkOper(String input){
+    public static Operation checkOperation(String input){
         return Arrays.stream(Operation.values())
                 .filter(operation -> operation.userInput.equals(input))
                 .findAny()

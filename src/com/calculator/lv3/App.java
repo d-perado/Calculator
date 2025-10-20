@@ -34,7 +34,7 @@ public class App {
                     try {
                         num1 = Double.parseDouble(input1);
                         num2 = Double.parseDouble(input2);
-                        operation = Operation.checkOper(input3);
+                        operation = Operation.checkOperation(input3);
                         switch (operation) {
                             case PLUS: {
                                 System.out.println(arithmeticCalculator.plus.compute(num1,num2));
