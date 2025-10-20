@@ -22,9 +22,9 @@ public class App {
             switch (input) {
 
                 case "1": {
-                    System.out.println("정수를 입력하세요.");
+                    System.out.println("숫자를 입력하세요.");
                     String input1=sc.nextLine();
-                    System.out.println("정수를 입력하세요.");
+                    System.out.println("숫자를 입력하세요.");
                     String input2=sc.nextLine();
                     System.out.println("사칙연산기호를 입력하세요.(+,-,/,*)");
                     String input3=sc.nextLine();
