@@ -48,10 +48,14 @@ public class CalculatorController {
             }
         }
         String operation = view.getUserChoice();
-
-        if (!operation.equals(Operation.ADD.getSymbol()) && !operation.equals(Operation.MULTIPLY.getSymbol())
-                && !operation.equals(Operation.SUBTRACT.getSymbol()) && !operation.equals(Operation.DIVIDE.getSymbol())) {
-            System.out.println("지원하지 않는 연산자입니다.");
+        boolean checkOperator = false;
+        for(Operation operator : Operation.values()){
+            if(operation.equals(operator.getSymbol())){
+                checkOperator=true;
+            }
+        }
+        if(!checkOperator){
+            System.out.println("지원하지 않는 연산자 입니다.");
             return;
         }
 

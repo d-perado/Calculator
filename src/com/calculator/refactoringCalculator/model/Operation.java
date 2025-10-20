@@ -26,6 +26,11 @@ public enum Operation {
         public <T extends Number> Command getCommand(CalculatorModel model) {
             return new DivideCommand<>(model);
         }
+    },
+    SQUARE("^") {
+        @Override
+        public <T extends Number> Command getCommand(CalculatorModel model) { return new SquareCommand<>(model);
+        }
     };
 
     private String symbol;

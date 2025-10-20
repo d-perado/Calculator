@@ -23,4 +23,7 @@ public class CalculatorModel {
         }
         return a / b;
     }
+    public double square(double a, double b) {
+        return Math.pow(a,b);
+    }
 }

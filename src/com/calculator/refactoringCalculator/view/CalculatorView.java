@@ -39,7 +39,11 @@ public class CalculatorView {
 
     // 결과 출력
     public void displayResult(double result) {
+        if(result%1==0){
+            System.out.println("계산 결과: "+(int)result);
+        }else {
         System.out.println("계산 결과: " + result);
+        }
     }
 
     // 사용자 선택 받기
