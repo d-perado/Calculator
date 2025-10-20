@@ -49,7 +49,8 @@ public class CalculatorController {
         }
         String operation = view.getUserChoice();
 
-        if (!operation.equals("+") && !operation.equals("-") && !operation.equals("*") && !operation.equals("/")) {
+        if (!operation.equals(Operation.ADD.getSymbol()) && !operation.equals(Operation.MULTIPLY.getSymbol())
+                && !operation.equals(Operation.SUBTRACT.getSymbol()) && !operation.equals(Operation.DIVIDE.getSymbol())) {
             System.out.println("지원하지 않는 연산자입니다.");
             return;
         }
@@ -58,19 +59,10 @@ public class CalculatorController {
         Number b = view.getNumber("두 번째 숫자를 입력하세요: ");
 
         Command command = null;
-        switch (operation) {
-            case "+":
-                command = new AddCommand<>(model);
-                break;
-            case "-":
-                command = new SubtractCommand<>(model);
-                break;
-            case "*":
-                command = new MultiplyCommand<>(model);
-                break;
-            case "/":
-                command = new DivideCommand<>(model);
-                break;
+        for(Operation operator : Operation.values()){
+            if(operation.equals(operator.getSymbol())){
+                command=operator.getCommand(model);
+            }
         }
 
         double result = command.execute(a, b);
