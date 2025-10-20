@@ -73,9 +73,15 @@ public class ArithmeticCalculator<T extends Number> {
     //입력 받은 수보다 큰 수만 출력하기
     public void printBiggerNumber(T num) {
         if (this.results == null) return;
-        System.out.println(this.results.stream()
+
+        ArrayList<Double> temp = new ArrayList<>();
+        for (Double result:results){
+            temp.add(result.doubleValue());
+        }
+        System.out.println(temp.stream()
                 .filter((value) -> (value > num.doubleValue()))
                 .collect(Collectors.toList()));
+        temp.clear();
     }
 
 }
