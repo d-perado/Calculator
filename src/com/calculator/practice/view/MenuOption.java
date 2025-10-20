@@ -1,8 +1,6 @@
-package com.calculator.refactoringCalculator.view;
+package com.calculator.practice.view;
 
-import com.calculator.refactoringCalculator.controller.CalculatorController;
-
-import java.util.ArrayList;
+import com.calculator.practice.controller.CalculatorController;
 
 public enum MenuOption {
     CALCULATE("연산하기") {

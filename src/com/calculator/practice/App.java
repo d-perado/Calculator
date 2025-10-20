@@ -1,6 +1,6 @@
-package com.calculator.refactoringCalculator;
+package com.calculator.practice;
 
-import com.calculator.refactoringCalculator.controller.CalculatorController;
+import com.calculator.practice.controller.CalculatorController;
 
 public class App {
     public static void main(String[] args) {

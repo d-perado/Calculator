@@ -1,6 +1,6 @@
-package com.calculator.refactoringCalculator.model;
+package com.calculator.practice.model;
 
-import com.calculator.refactoringCalculator.command.*;
+import com.calculator.practice.command.*;
 
 public enum Operation {
     ADD("+") {

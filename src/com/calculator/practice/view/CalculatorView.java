@@ -1,4 +1,4 @@
-package com.calculator.refactoringCalculator.view;
+package com.calculator.practice.view;
 
 import java.util.ArrayList;
 import java.util.Scanner;

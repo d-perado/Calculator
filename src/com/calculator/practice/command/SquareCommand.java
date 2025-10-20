@@ -1,6 +1,6 @@
-package com.calculator.refactoringCalculator.command;
+package com.calculator.practice.command;
 
-import com.calculator.refactoringCalculator.model.CalculatorModel;
+import com.calculator.practice.model.CalculatorModel;
 
 public class SquareCommand<T extends Number> implements Command {
     private CalculatorModel model;

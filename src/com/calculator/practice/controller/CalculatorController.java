@@ -1,10 +1,10 @@
-package com.calculator.refactoringCalculator.controller;
+package com.calculator.practice.controller;
 
-import com.calculator.refactoringCalculator.command.*;
-import com.calculator.refactoringCalculator.model.CalculatorModel;
-import com.calculator.refactoringCalculator.model.Operation;
-import com.calculator.refactoringCalculator.view.CalculatorView;
-import com.calculator.refactoringCalculator.view.MenuOption;
+import com.calculator.practice.command.*;
+import com.calculator.practice.model.CalculatorModel;
+import com.calculator.practice.model.Operation;
+import com.calculator.practice.view.CalculatorView;
+import com.calculator.practice.view.MenuOption;
 
 import java.util.ArrayList;
 

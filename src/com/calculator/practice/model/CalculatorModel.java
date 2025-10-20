@@ -1,4 +1,4 @@
-package com.calculator.refactoringCalculator.model;
+package com.calculator.practice.model;
 
 public class CalculatorModel {
     // 덧셈
