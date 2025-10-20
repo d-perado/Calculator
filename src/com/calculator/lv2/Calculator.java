@@ -48,9 +48,6 @@ public class Calculator {
 
     //연산기록 조회
     public ArrayList<String> getResults() {
-        if(results.isEmpty()){
-            System.out.println("조회할 데이터가 없습니다.");
-        }
         return results;
     }
 
@@ -74,6 +71,7 @@ public class Calculator {
     public void removeFirstData(){
         if(results.isEmpty()){
             System.out.println("제거할 데이터가 없습니다.");
+            return;
         }
         this.results.remove(0);
     }

@@ -55,7 +55,7 @@ public class App {
                     break;
                 }
                 case "2": {
-                    if (calculator.getResults() == null) {
+                    if (calculator.getResults().isEmpty()) {
                         System.out.println("연산기록이 없습니다.");
                         break;
                     }
