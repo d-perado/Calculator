@@ -58,7 +58,7 @@ public class Calculator {
                         System.out.println(":::올바른 사칙연산기호를 입력해주세요.:::");
                 }
             } catch (Exception e) {
-                System.out.println(":::숫자를 제대로 입력해주세요.:::");
+                System.out.println(":::올바른 입력을 해주세요.:::");
             }
 
         }
