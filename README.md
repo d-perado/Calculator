@@ -1,3 +1,6 @@
+### 구현기간
+2025.10.14(화) ~ 20.10~20(월)
+
 ### lv1구현
 
 ![lv1](https://github.com/user-attachments/assets/9827579f-d6ae-44b6-9b22-4d2c837e54c2)
