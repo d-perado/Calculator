@@ -6,12 +6,14 @@
 3. 종료
 
 
-###lv2 구현
+### lv2 구현
+
 ![lv2](https://github.com/user-attachments/assets/03becfe7-bbf9-42f0-8c77-6bafc6005e52)
 1. 결과값 기록
 2. 컬렉션의 첫번째 데이터 삭제
 
-###lv3 구현
+### lv3 구현
+
 ![lv3](https://github.com/user-attachments/assets/aca1cb93-7795-4179-bbb7-c77c4656c300)
 1. 실수 입력가능
 2. 컬렉션 조회 가능
