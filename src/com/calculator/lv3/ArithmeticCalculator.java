@@ -1,16 +1,17 @@
 package com.calculator.lv3;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class ArithmeticCalculator<T extends Number> {
     //속성
-    private ArrayList<Double> results; //계산된 결과값들
-    private boolean calculatorOnOFF;
+    private List<Double> results; //계산된 결과값들
+    private boolean isCarculator;
 
     //생성자
     ArithmeticCalculator() {
-        this.calculatorOnOFF = true;
+        this.isCarculator = true;
         results = new ArrayList<>();
     }
 
@@ -22,7 +23,7 @@ public class ArithmeticCalculator<T extends Number> {
     Calculator<T> minus = (T a, T b) -> a.doubleValue() + b.doubleValue();
 
     //나눗셈
-    Calculator<T> divid = (T a, T b) -> {
+    Calculator<T> divide = (T a, T b) -> {
         if (b.equals(0)) {
             return Double.POSITIVE_INFINITY;
         } else {
@@ -35,24 +36,33 @@ public class ArithmeticCalculator<T extends Number> {
 
     //getters
     //계산기 전원
-    public boolean isCalculatorOnOFF() {
-        return calculatorOnOFF;
+    public boolean isCarculatorOn() {
+        return isCarculator;
     }
 
     //연산기록 조회
-    public ArrayList<Double> getResults() {
+    public List<Double> getResults() {
         return results;
+    }
+    public double getMinus(T a, T b){
+        return minus.compute(a,b);
+    }
+    public double getPlus(T a, T b){
+        return plus.compute(a,b);
+    }
+
+    public double getDivide(T a, T b){
+        return divide.compute(a,b);
+    }
+
+    public double getMul(T a, T b){
+        return mul.compute(a,b);
     }
 
     //setters
     //계산기 전원 on/off
-    public void setCalculatorOnOFF() {
-        this.calculatorOnOFF = !calculatorOnOFF;
-    }
-
-    //연산기록변경
-    public void setResults(ArrayList<Double> results) {
-        this.results = results;
+    public void setisCarculator() {
+        this.isCarculator = !isCarculator;
     }
 
     //연산기록 추가
@@ -66,7 +76,6 @@ public class ArithmeticCalculator<T extends Number> {
             System.out.println("제거할 데이터가 없습니다.");
             return;
         }
-        ;
         this.results.remove(0);
     }
 
@@ -76,7 +85,7 @@ public class ArithmeticCalculator<T extends Number> {
 
         ArrayList<Double> temp = new ArrayList<>();
         for (Double result:results){
-            temp.add(result.doubleValue());
+            temp.add(result);
         }
         System.out.println(temp.stream()
                 .filter((value) -> (value > num.doubleValue()))

@@ -1,7 +1,6 @@
 package com.calculator.lv3;
 
 import java.util.Arrays;
-import java.util.function.BiFunction;
 
 public enum Operation {
     PLUS("+"),
@@ -15,12 +14,6 @@ public enum Operation {
     Operation(String userInput){
         this.userInput=userInput;
     }
-
-    public String getUserInput() {
-        return userInput;
-    }
-
-
 
     public static Operation checkOperation(String input){
         return Arrays.stream(Operation.values())
